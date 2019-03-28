@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+alias ll="ls -FGlAhp"
+
+# Laravel
+alias art="php artisan"
+alias serve="php artisan serve"

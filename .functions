@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Laravel
+function reseed {
+  php artisan migrate:refresh && php artisan db:seed
+}
