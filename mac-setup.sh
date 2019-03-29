@@ -3,11 +3,11 @@
 echo "Copying .bash_profile"
 cp ./.bash_profile ~/.bash_profile
 
-echo "Copying Sublime Text preferences"
-cp ./SublimeText/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-
 echo "Sourcing .bash_profile"
 source ~/.bash_profile
+
+echo "Copying Sublime Text preferences"
+cp ./SublimeText/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
 
 if [ -n $(which brew) ]
 then
