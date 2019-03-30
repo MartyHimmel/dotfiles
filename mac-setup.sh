@@ -2,9 +2,8 @@
 
 DOTFILES_DIR=$PWD
 
-echo "Setting up .bash_profile"
+echo "Copying .bash_profile"
 cp $DOTFILES_DIR/.bash_profile ~/.bash_profile
-source ~/.bash_profile
 echo "Done"
 
 cd ~
@@ -17,6 +16,7 @@ if [ -n $(which brew) ]
 then
     echo "Homebrew is already installed - updating"
     brew update
+    echo "Done updating Homebrew"
 else
     echo "Installing Homebrew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
