@@ -49,6 +49,7 @@ brew install rbenv
 brew install node
 brew install composer
 brew install dnsmasq
+brew install eslint
 echo "Done installing dev tools"
 
 echo "Setting up Sublime Text"
