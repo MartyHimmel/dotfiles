@@ -75,8 +75,14 @@ brew cask install gimp
 brew cask install aseprite
 echo "Done installing design tools"
 
-echo "Cleaning up"
+echo "Cleaning up installation files"
 brew cleanup
+
+echo "Setting up mariadb"
+# cleanup removes a folder required for mariadb
+mkdir /usr/local/etc/my.cnf.d
+mysql_secure_installation
+echo "Done setting up mariadb"
 
 cd $DOTFILES_DIR
 
