@@ -53,7 +53,12 @@ brew install eslint
 echo "Done installing dev tools"
 
 echo "Setting up Sublime Text"
-cp $DOTFILES_DIR/SublimeText/Preferences.sublime-settings "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+for sublime_file in "$DOTFILES_DIR/SublimeText"/*
+do
+    file_name=$(basename "$sublime_file")
+    copy_destination=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"$file_name"
+    cp "$sublime_file" "$copy_destination"
+done
 ln -s "/Application/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 echo "Done setting up Sublime Text"
 
