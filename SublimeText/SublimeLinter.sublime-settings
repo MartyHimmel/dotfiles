@@ -1,0 +1,11 @@
+// SublimeLinter Settings - User
+{
+	"linters": {
+		"scsslint": {
+			"args": ["--config", "~/scsslint.config.yml"]
+		},
+        "eslint": {
+            "selector": "text.html.vue, source.js - meta.attribute-with-value"
+        }
+	}
+}

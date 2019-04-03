@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+\$handle = fopen(__DIR__ . '/$1', '$2');
+fwrite(\$handle, print_r($3, true));
+fclose(\$handle);
+]]></content>
+<tabTrigger>writefile</tabTrigger>
+<description>Open, write to, close file</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.class.php, meta.block.php, meta.function.php, meta.block.php, variable.other.php, punctuation.definition.variable.php</scope>
+</snippet>

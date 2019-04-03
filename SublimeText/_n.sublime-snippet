@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+_n('${1:single}', '${2:plural}', ${3:0}, '${4:language-domain}')
+]]></content>
+<tabTrigger>_n</tabTrigger>
+<description>Handles i18n for plurals in WordPress</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.class.php, meta.block.php, meta.function.php, meta.block.php, meta.array.php</scope>
+</snippet>

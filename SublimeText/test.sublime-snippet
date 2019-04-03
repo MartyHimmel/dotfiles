@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+/** @test */
+public function ${1}() {
+	${2}
+}
+]]></content>
+<tabTrigger>phptest</tabTrigger>
+<description>phpunit test</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.class.php, meta.block.php, comment.block.php, punctuation.definition.comment.begin.php</scope>
+</snippet>
