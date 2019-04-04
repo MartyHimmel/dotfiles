@@ -37,6 +37,7 @@ brew cask install tor-browser
 echo "Done installing browsers"
 
 echo "Installing dev tools"
+brew cask install iterm2
 brew cask install sublime-text
 brew cask install visual-studio-code
 brew cask install postman
@@ -80,6 +81,14 @@ echo "Installing design tools"
 brew cask install gimp
 brew cask install aseprite
 echo "Done installing design tools"
+
+echo "Installing other programs"
+brew cask install adobe-acrobat-reader
+brew cask install teamviewer
+brew cask install obs
+brew cask install dropbox
+brew cask install spotify
+echo "Done"
 
 echo "Cleaning up installation files"
 brew cleanup
