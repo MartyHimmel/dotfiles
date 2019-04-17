@@ -48,6 +48,7 @@ brew install mariadb
 brew install phpmyadmin
 brew install rbenv
 brew install node
+brew install yarn
 brew install composer
 brew install dnsmasq
 brew install eslint
