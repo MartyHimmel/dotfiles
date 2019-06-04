@@ -28,6 +28,7 @@ brew install coreutils
 brew install wget
 brew install screen
 brew install grep
+brew install tree
 echo "Done installing core utilities"
 
 echo "Installing browsers"
