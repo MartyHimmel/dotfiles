@@ -19,7 +19,7 @@ then
     echo "Done updating Homebrew"
 else
     echo "Installing Homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     echo "Finished installing Homebrew"
 fi
 
@@ -56,6 +56,11 @@ brew install eslint
 echo "Done installing dev tools"
 
 echo "Setting up Sublime Text"
+if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]
+then
+	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+fi
+
 for sublime_file in "$DOTFILES_DIR/SublimeText"/*
 do
     file_name=$(basename "$sublime_file")
@@ -73,7 +78,7 @@ sudo mkdir /etc/resolver
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 cd ~
 mkdir www
-echo "Done setting up web dev environment"
+echo "Done setting up .test web dev environment"
 
 echo "Setting up rbenv"
 rbenv init
@@ -90,6 +95,8 @@ brew cask install teamviewer
 brew cask install obs
 brew cask install dropbox
 brew cask install spotify
+brew cask install slack
+brew cask install discord
 echo "Done"
 
 echo "Cleaning up installation files"
