@@ -95,6 +95,12 @@ brew cask install slack
 brew cask install discord
 echo "Done"
 
+echo "Installing custom fonts"
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+brew cask install font-fira-mono-for-powerline
+echo "Done install fonts"
+
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
