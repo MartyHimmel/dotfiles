@@ -63,7 +63,7 @@ do
     copy_destination=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"$file_name"
     cp "$sublime_file" "$copy_destination"
 done
-ln -s "/Application/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 echo "Done setting up Sublime Text"
 
 echo "Setting up .test environment for web development"
