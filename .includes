@@ -1,0 +1,4 @@
+
+source ~/dotfiles/.path
+source ~/dotfiles/.aliases
+source ~/dotfiles/.functions

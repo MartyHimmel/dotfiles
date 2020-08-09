@@ -2,10 +2,6 @@
 
 DOTFILES_DIR=$PWD
 
-echo "Copying .bash_profile"
-cp $DOTFILES_DIR/.bash_profile ~/.bash_profile
-echo "Done"
-
 cd ~
 
 echo "Installing xcode"
@@ -108,6 +104,8 @@ sed -i.bak 's/ZSH_THEME="\([^"]*\)"/ZSH_THEME="spaceship"/' ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sed -i "" 's/plugins=(\([^)]*\))/plugins=(git osx zsh-syntax-highlighting)/' ~/.zshrc
+
+cat "$DOTFILES_DIR/.includes" >> ~/.zshrc
 echo "Done installing Oh My Zsh"
 
 source ~/.zshrc
