@@ -1,5 +1,25 @@
 #!/usr/bin/env bash
 
+function set_permissions {
+    echo "Updating directory permissions"
+    sudo find ./ -type d -exec chmod 755 {} \;
+
+    echo "Updating file permissions"
+    sudo find ./ -type f -exec chmod 644 {} \;
+}
+
+function laravel_permissions {
+    set_permissions
+
+    echo "Setting directory ownership"
+    sudo chown -R $USER ./
+
+    echo "Setting storage and bootstrap/cache group and permissions"
+    WWW_GROUP=`apachectl -S | grep Group | grep -o '".*"' | tr -d '"'`
+    sudo chgrp -R "$WWW_GROUP" storage bootstrap/cache
+    sudo chmod -R ug+rwx storage bootstrap/cache
+}
+
 # Laravel
 function reseed {
   php artisan migrate:refresh && php artisan db:seed
